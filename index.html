@@ -12,11 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="/scripts.js"></script>
   </head>
   <body>
     <div class="header">
       <div class="config">
-        <img src="/assets/config.svg" alt="O" />
+        <img
+          src="/assets/config.svg"
+          class="configSVG"
+          id="configSVG"
+          onclick="toggleDarkMode()"
+          alt="O"
+        />
       </div>
       <div class="title">
         <h1>CODLE</h1>
@@ -62,12 +69,26 @@
       </div>
       <div class="ranking">
         <div class="rankingHeader">
-          <img src="/assets/crownWhite.svg" class="crownWhite" alt="O" />
+          <img
+            src="/assets/crownWhite.svg"
+            class="crownWhite"
+            id="crownWhite"
+            onclick="changeRanking1()"
+            alt="O"
+          />
+          <img
+            src="/assets/crownYellow.svg"
+            class="crownYellow"
+            id="crownYellow"
+            onclick="changeRanking2()"
+            alt="O"
+          />
           <h4>RANKING</h4>
         </div>
         <div class="rankingSpaceLine"></div>
         <div class="rankingType">
-          <h4>GERAL</h4>
+          <h4 class="geralText" id="geralText">GERAL</h4>
+          <h4 class="streakText" id="streakText">STREAK</h4>
         </div>
         <div class="rankingList">
           <div class="rankingLine">
@@ -198,7 +219,7 @@
             <h2>M</h2>
           </div>
           <div class="keyboardKey del">
-            <img src="/assets/backspace.svg" alt="DEL" />
+            <img src="/assets/backspace.svg" class="delSVG" alt="DEL" />
           </div>
         </div>
       </div>
