@@ -1,0 +1,13 @@
+h1 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #27A8C2;
+}
