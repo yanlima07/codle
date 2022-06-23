@@ -82,6 +82,12 @@ h1 {
   color: #ffffff;
 }
 
+@media (max-width: 500px) {
+  .content .ranking {
+    display: none !important;
+  }
+}
+
 .content .ranking {
   display: flex;
   flex-direction: column;
