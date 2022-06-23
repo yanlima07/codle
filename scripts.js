@@ -20,7 +20,7 @@ function toggleDarkMode() {
     // });
 }
 
-const word = "PILHA";
+const word = "MOUSE";
 
 const XCount = 5;
 const YCount = 5;
