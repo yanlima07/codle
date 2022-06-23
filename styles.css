@@ -77,6 +77,10 @@ h1 {
     align-items: center;
 }
 
+.squareLine .dark-square {
+    color: #ffffff;
+}
+
 .content .ranking {
     display: flex;
     flex-direction: column;
