@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   background-color: #27a8c2;
+  overflow: hidden;
 }
 
 .dark {
@@ -201,9 +202,10 @@ h1 {
 
 .fish {
   display: flex;
-  width: 10vh;
   position: absolute;
-  margin-left: 5vh;
+  bottom: 0;
+  left: -150px;
+  z-index: -1;
 }
 
 .fish .fishRed {
@@ -211,7 +213,12 @@ h1 {
 }
 
 .fish .fishBlue {
-  width: 10vh;
+  width: 7vh;
+}
+
+.fish .fishYellow {
+  width: 4vh;
+  filter: hue-rotate(210deg);
 }
 
 .footer {

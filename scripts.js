@@ -53,17 +53,102 @@ function init() {
   };
 
   window.addEventListener("load", function () {
-    let fish = this.document.getElementById("fish");
-    let xRange = window.screen.width;
-    let yRange = window.screen.length;
-    var xPos = 0;
-    var yPos = 0;
+    let fishRed = this.document.getElementById("fishRed");
+    let fishBlue = this.document.getElementById("fishBlue");
+    let fishYellow = this.document.getElementById("fishYellow");
 
-    function xMoviment() {
-      for (let i = 0; i < xRange; i++) {
-        fish.style.left = xPos;
+    let xRange = window.screen.width + 200;
+    let yRange = window.screen.height - 200;
+
+    var xPosRed = 0;
+    var xPosBlue = 0;
+    var xPosYellow = 0;
+
+    var yPosRed = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+    var yPosBlue = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+    var yPosYellow = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+
+    var speedRed = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+    var speedBlue = Math.floor(Math.random() * (5 - 2 + 1)) + 2;
+    var speedYellow = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+
+    var angle = 1;
+    var direction = 1;
+
+    function moveFish() {
+      if (xPosRed < xRange) {
+        fishRed.style.transform =
+          "translate(" +
+          xPosRed +
+          "px, -" +
+          yPosRed +
+          "px) " +
+          "rotate(" +
+          angle +
+          "deg)";
+
+        fishBlue.style.transform =
+          "translate(" +
+          xPosBlue +
+          "px, -" +
+          yPosBlue +
+          "px) " +
+          "rotate(" +
+          angle +
+          "deg)";
+
+        fishYellow.style.transform =
+          "translate(" +
+          xPosYellow +
+          "px, -" +
+          yPosYellow +
+          "px) " +
+          "rotate(" +
+          angle +
+          "deg)";
+
+        xPosRed += speedRed;
+        xPosBlue += speedBlue;
+        xPosYellow += speedYellow;
+
+        changeAngle();
       }
     }
+
+    function changeAngle() {
+      if (direction == 1) {
+        angle++;
+        if (angle == 7) {
+          direction = -1;
+        }
+      } else {
+        angle--;
+        if (angle == -5) {
+          direction = 1;
+        }
+      }
+    }
+
+    function resetFish() {
+      xPosRed = 0;
+      xPosBlue = 0;
+      xPosYellow = 0;
+
+      yPosRed = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+      yPosBlue = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+      yPosYellow = Math.floor(Math.random() * (yRange - 0 + 1)) + 0;
+
+      speedRed = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+      speedBlue = Math.floor(Math.random() * (5 - 3 + 1)) + 3;
+      var speedYellow = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+
+      console.log("red " + speedRed);
+      console.log("blue " + speedBlue);
+      console.log("yellow " + speedYellow);
+    }
+
+    setInterval(moveFish, 10);
+    this.setInterval(resetFish, 20000);
   });
 }
 
