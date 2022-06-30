@@ -1,236 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CODLE</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="/scripts.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <div class="config">
-        <img
-          src="/assets/config.svg"
-          class="configSVG"
-          id="configSVG"
-          onclick="toggleDarkMode()"
-          alt="O"
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CODLE</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"
         />
-      </div>
-      <div class="title">
-        <h1>CODLE</h1>
-      </div>
-    </div>
-    <div class="content">
-      <div class="squaresBox">
-        <div class="squareLine">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <script src="/scripts.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="config">
+                <img
+                    src="./assets/config.svg"
+                    class="configSVG"
+                    id="configSVG"
+                    onclick="toggleDarkMode()"
+                    alt="O"
+                />
+            </div>
+            <div class="title">
+                <h1>CODLE</h1>
+            </div>
         </div>
-        <div class="squareLine">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <div class="content">
+            <div class="squaresBox">
+                <div class="squareLine">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="squareLine">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="squareLine">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="squareLine">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="squareLine">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+            <div class="ranking">
+                <div class="rankingHeader">
+                    <img
+                        src="./assets/crownWhite.svg"
+                        class="crownWhite"
+                        id="crownWhite"
+                        onclick="changeRanking()"
+                        alt="O"
+                    />
+                    <img
+                        src="./assets/crownYellow.svg"
+                        class="crownYellow"
+                        id="crownYellow"
+                        onclick="changeRanking()"
+                        alt="O"
+                    />
+                    <h4>RANKING</h4>
+                </div>
+                <div class="rankingSpaceLine"></div>
+                <div class="rankingType">
+                    <h4 class="geralText" id="geralText">GERAL</h4>
+                    <h4 class="streakText" id="streakText">STREAK</h4>
+                </div>
+                <div class="rankingList">
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">1.</h5>
+                        <img
+                            src="./assets/userBubbleGreen.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">ALLAN</h5>
+                        <h5 class="rankingPoints">15</h5>
+                    </div>
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">2.</h5>
+                        <img
+                            src="./assets/userBubbleWhite.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">MARCO</h5>
+                        <h5 class="rankingPoints">14</h5>
+                    </div>
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">3.</h5>
+                        <img
+                            src="./assets/userBubbleWhite.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">RAFAEL</h5>
+                        <h5 class="rankingPoints">10</h5>
+                    </div>
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">4.</h5>
+                        <img
+                            src="./assets/userBubbleGreen.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">GABRIEL</h5>
+                        <h5 class="rankingPoints">9</h5>
+                    </div>
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">5.</h5>
+                        <img
+                            src="./assets/userBubbleWhite.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">YANDRIW</h5>
+                        <h5 class="rankingPoints">7</h5>
+                    </div>
+                    <div class="rankingLine">
+                        <h5 class="rankingPosition">6.</h5>
+                        <img
+                            src="./assets/userBubbleGreen.svg"
+                            class="userBubble"
+                            alt="O"
+                        />
+                        <h5 class="rankingUsername">FLAVIA</h5>
+                        <h5 class="rankingPoints">5</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="squareLine">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <div class="fish">
+            <img src="./assets/red.svg" class="fishRed" id="fishRed" alt=">O" />
+            <img
+                src="./assets/blue.svg"
+                class="fishBlue"
+                id="fishBlue"
+                alt=">O"
+            />
+            <img
+                src="./assets/blue.svg"
+                class="fishYellow"
+                id="fishYellow"
+                alt=">O"
+            />
         </div>
-        <div class="squareLine">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
+        <div class="footer">
+            <div class="keyboard">
+                <div class="keyboardLine">
+                    <div class="keyboardKey button">
+                        <h2>Q</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>W</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>E</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>R</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>T</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>Y</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>U</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>I</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>O</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>P</h2>
+                    </div>
+                </div>
+                <div class="keyboardLine">
+                    <div class="keyboardKey">
+                        <h2>A</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>S</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>D</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>F</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>G</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>H</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>J</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>K</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>L</h2>
+                    </div>
+                </div>
+                <div class="keyboardLine">
+                    <div class="enter">
+                        <h3>ENTER</h3>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>Z</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>X</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>C</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>V</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>B</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>N</h2>
+                    </div>
+                    <div class="keyboardKey">
+                        <h2>M</h2>
+                    </div>
+                    <div class="del">
+                        <img
+                            src="./assets/backspace.svg"
+                            class="delSVG"
+                            alt="DEL"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="squareLine">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-      </div>
-      <div class="ranking">
-        <div class="rankingHeader">
-          <img
-            src="/assets/crownWhite.svg"
-            class="crownWhite"
-            id="crownWhite"
-            onclick="changeRanking()"
-            alt="O"
-          />
-          <img
-            src="/assets/crownYellow.svg"
-            class="crownYellow"
-            id="crownYellow"
-            onclick="changeRanking()"
-            alt="O"
-          />
-          <h4>RANKING</h4>
-        </div>
-        <div class="rankingSpaceLine"></div>
-        <div class="rankingType">
-          <h4 class="geralText" id="geralText">GERAL</h4>
-          <h4 class="streakText" id="streakText">STREAK</h4>
-        </div>
-        <div class="rankingList">
-          <div class="rankingLine">
-            <h5 class="rankingPosition">1.</h5>
-            <img src="/assets/userBubbleGreen.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">ALLAN</h5>
-            <h5 class="rankingPoints">15</h5>
-          </div>
-          <div class="rankingLine">
-            <h5 class="rankingPosition">2.</h5>
-            <img src="/assets/userBubbleWhite.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">MARCO</h5>
-            <h5 class="rankingPoints">14</h5>
-          </div>
-          <div class="rankingLine">
-            <h5 class="rankingPosition">3.</h5>
-            <img src="/assets/userBubbleWhite.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">RAFAEL</h5>
-            <h5 class="rankingPoints">10</h5>
-          </div>
-          <div class="rankingLine">
-            <h5 class="rankingPosition">4.</h5>
-            <img src="/assets/userBubbleGreen.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">GABRIEL</h5>
-            <h5 class="rankingPoints">9</h5>
-          </div>
-          <div class="rankingLine">
-            <h5 class="rankingPosition">5.</h5>
-            <img src="/assets/userBubbleWhite.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">YANDRIW</h5>
-            <h5 class="rankingPoints">7</h5>
-          </div>
-          <div class="rankingLine">
-            <h5 class="rankingPosition">6.</h5>
-            <img src="/assets/userBubbleGreen.svg" class="userBubble" alt="O" />
-            <h5 class="rankingUsername">FLAVIA</h5>
-            <h5 class="rankingPoints">5</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="fish">
-      <img src="/assets/red.svg" class="fishRed" id="fishRed" alt=">O" />
-      <img src="/assets/blue.svg" class="fishBlue" id="fishBlue" alt=">O" />
-      <img src="/assets/blue.svg" class="fishYellow" id="fishYellow" alt=">O" />
-    </div>
-    <div class="footer">
-      <div class="keyboard">
-        <div class="keyboardLine">
-          <div class="keyboardKey button">
-            <h2>Q</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>W</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>E</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>R</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>T</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>Y</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>U</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>I</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>O</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>P</h2>
-          </div>
-        </div>
-        <div class="keyboardLine">
-          <div class="keyboardKey">
-            <h2>A</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>S</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>D</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>F</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>G</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>H</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>J</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>K</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>L</h2>
-          </div>
-        </div>
-        <div class="keyboardLine">
-          <div class="enter">
-            <h3>ENTER</h3>
-          </div>
-          <div class="keyboardKey">
-            <h2>Z</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>X</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>C</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>V</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>B</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>N</h2>
-          </div>
-          <div class="keyboardKey">
-            <h2>M</h2>
-          </div>
-          <div class="del">
-            <img src="/assets/backspace.svg" class="delSVG" alt="DEL" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      init();
-    </script>
-  </body>
+        <script>
+            init();
+        </script>
+    </body>
 </html>
