@@ -8,7 +8,16 @@ function toggleDarkMode() {
     }
 }
 
-const word = "MOUSE";
+let volume = 0.3;
+
+let buttonHitSound = new Audio("./sounds/pin.wav");
+buttonHitSound.volume = volume;
+let enterSound = new Audio("./sounds/bubbles.wav");
+enterSound.volume = volume;
+let winSound = new Audio("./sounds/win.mp3");
+winSound.volume = volume;
+
+const word = "INPUT";
 
 const XCount = 5;
 const YCount = 5;
@@ -47,8 +56,9 @@ function init() {
     enter.onclick = (e) => {
         if (cursorPosition >= 5) {
             checkGuess();
+            enterSound.play();
         } else {
-            alert("Incompleto");
+            alert("Faltam algumas letras.");
         }
     };
 
@@ -163,6 +173,7 @@ function handleInput(i) {
 
     guess[cursorPosition] = QWERTY[i];
     cursorPosition++;
+    buttonHitSound.cloneNode(true).play();
 
     updateGuess();
 }
@@ -242,10 +253,11 @@ function checkGuess() {
         guess = [];
 
         if (guessCount >= YCount) {
-            alert("FAIL");
+            alert("Perdeu! Tente novamente!");
         }
     } else {
-        alert("WIN");
+        alert("Parabéns! Você ganhou!");
+        winSound.play();
     }
 }
 
